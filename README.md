@@ -9,20 +9,22 @@
 
 An end-to-end industrial-grade **Network Attack Detection & Threat Intelligence System** capable of real-time network traffic classification, multi-class attack categorization, anomaly scoring, and live monitoring.
 
+Repository: [ftarunnnn/Cybersecurity-Network-Attack-Detection](https://github.com/ftarunnnn/Cybersecurity-Network-Attack-Detection)
+
 ---
 
 ## 📌 Project Architecture & 10-Phase Roadmap
 
-- [x] **Phase 1 — Problem Definition**: Dual classification (Normal vs Attack), multi-class attack labels (DDoS, DoS, Brute Force, Botnet, PortScan, Infiltration), confidence & anomaly scoring specs.
-- [ ] **Phase 2 — Dataset Collection**: Network traffic dataset generator modeling CIC-IDS2017, UNSW-NB15, & CIC-DDoS2019 schema formats + custom CSV support.
-- [ ] **Phase 3 — Data Preprocessing**: Deduplication, null handling, IP/Port/Protocol encoding, and Robust MinMax scaling.
-- [ ] **Phase 4 — EDA & Traffic Analysis**: Statistical summaries, attack distribution, correlation heatmaps, box plots, and class imbalance metrics.
-- [ ] **Phase 5 — Feature Engineering**: Derived flow rate features (packets/sec, bytes/sec, SYN/ACK ratios) & Random Forest Gini feature selection.
-- [ ] **Phase 6 — ML Model Development**: Classical ML models (Random Forest & XGBoost classifiers).
-- [ ] **Phase 7 — DL Model Development**: PyTorch Deep Learning suite featuring 1D CNN, LSTM, and Autoencoder (Unsupervised Anomaly Detection).
-- [ ] **Phase 8 — Model Evaluation**: High-recall optimization, confusion matrices, multi-class ROC-AUC curves, and metrics reporting.
-- [ ] **Phase 9 — Prediction Pipeline**: Unified modular inference engine returning threat status (🟢 Normal / 🔴 Attack), confidence score, and anomaly level.
-- [ ] **Phase 10 — Deployment & Monitoring**: FastAPI REST server + Streamlit Cybersecurity Dashboard with live traffic simulator and packet inspector.
+- [x] **Phase 1 — Problem Definition**: Dual classification (Normal vs Attack), multi-class attack labels (DDoS, DoS, Brute Force, Botnet, PortScan, Infiltration), confidence & anomaly scoring specs. ([Docs](file:///docs/phase1_problem_definition.md))
+- [x] **Phase 2 — Dataset Collection**: Network traffic dataset generator modeling CIC-IDS2017, UNSW-NB15, & CIC-DDoS2019 schema formats + custom CSV support. ([Docs](file:///docs/phase2_dataset_collection.md))
+- [x] **Phase 3 — Data Preprocessing**: Deduplication, null handling, IP/Port/Protocol encoding, and Robust MinMax scaling. ([Docs](file:///docs/phase3_data_preprocessing.md))
+- [x] **Phase 4 — EDA & Traffic Analysis**: Statistical summaries, attack distribution, correlation heatmaps, box plots, and class imbalance metrics. ([Docs](file:///docs/phase4_eda_traffic_analysis.md))
+- [x] **Phase 5 — Feature Engineering**: Derived flow rate features (packets/sec, bytes/sec, SYN/ACK ratios) & Random Forest Gini feature selection. ([Docs](file:///docs/phase5_feature_engineering.md))
+- [x] **Phase 6 — ML Model Development**: Classical ML models (Random Forest & XGBoost classifiers). ([Docs](file:///docs/phase6_ml_model_development.md))
+- [x] **Phase 7 — DL Model Development**: PyTorch Deep Learning suite featuring 1D CNN, LSTM, and Autoencoder (Unsupervised Anomaly Detection). ([Docs](file:///docs/phase7_dl_model_development.md))
+- [x] **Phase 8 — Model Evaluation**: High-recall optimization, confusion matrices, multi-class ROC-AUC curves, and metrics reporting. ([Docs](file:///docs/phase8_model_evaluation.md))
+- [x] **Phase 9 — Prediction Pipeline**: Unified modular inference engine returning threat status (🟢 Normal / 🔴 Attack), confidence score, and anomaly level. ([Docs](file:///docs/phase9_prediction_pipeline.md))
+- [x] **Phase 10 — Deployment & Monitoring**: FastAPI REST server + Streamlit Cybersecurity Dashboard with live traffic simulator and packet inspector. ([Docs](file:///docs/phase10_deployment_monitoring.md))
 
 ---
 
@@ -67,11 +69,9 @@ cd Cybersecurity-Network-Attack-Detection
 pip install -r requirements.txt
 ```
 
-### 2. Generate Dataset & Run Pipeline
+### 2. Run Automated Verification Tests
 ```bash
-python data/generate_network_data.py
-python -m src.models.train_ml_models
-python -m src.models.train_dl_models
+pytest tests/test_pipeline.py -v
 ```
 
 ### 3. Launch Streamlit Cybersecurity Dashboard
