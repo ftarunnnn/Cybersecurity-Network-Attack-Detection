@@ -1,0 +1,253 @@
+{
+  "total_records": 6000,
+  "binary_distribution": {
+    "0": 3302,
+    "1": 2698
+  },
+  "attack_percentage": 44.97,
+  "label_distribution": {
+    "Normal": 3302,
+    "DDoS": 745,
+    "DoS": 594,
+    "Brute Force": 476,
+    "Botnet": 353,
+    "PortScan": 277,
+    "Infiltration": 253
+  },
+  "group_means": {
+    "duration_sec": {
+      "Normal_mean": 2.57,
+      "Attack_mean": 13.42
+    },
+    "fwd_packets": {
+      "Normal_mean": 50.39,
+      "Attack_mean": 935.59
+    },
+    "bwd_packets": {
+      "Normal_mean": 60.47,
+      "Attack_mean": 25.07
+    },
+    "total_packets": {
+      "Normal_mean": 110.86,
+      "Attack_mean": 960.66
+    },
+    "packet_size_mean": {
+      "Normal_mean": 511.56,
+      "Attack_mean": 202.53
+    },
+    "packet_size_min": {
+      "Normal_mean": 339.79,
+      "Attack_mean": 50.17
+    },
+    "packet_size_max": {
+      "Normal_mean": 684.19,
+      "Attack_mean": 380.64
+    },
+    "packet_size_std": {
+      "Normal_mean": 86.32,
+      "Attack_mean": 22.44
+    },
+    "flow_bytes_per_sec": {
+      "Normal_mean": 64048.99,
+      "Attack_mean": 636587.45
+    },
+    "flow_packets_per_sec": {
+      "Normal_mean": 125.73,
+      "Attack_mean": 9920.41
+    }
+  },
+  "outliers_iqr": {
+    "duration_sec": {
+      "q1": 0.529725,
+      "q3": 4.2919,
+      "iqr": 3.762175,
+      "outlier_count": 734,
+      "outlier_ratio": 0.1223
+    },
+    "fwd_packets": {
+      "q1": 27.0,
+      "q3": 130.25,
+      "iqr": 103.25,
+      "outlier_count": 1282,
+      "outlier_ratio": 0.2137
+    },
+    "bwd_packets": {
+      "q1": 6.0,
+      "q3": 73.0,
+      "iqr": 67.0,
+      "outlier_count": 84,
+      "outlier_ratio": 0.014
+    },
+    "total_packets": {
+      "q1": 76.0,
+      "q3": 214.25,
+      "iqr": 138.25,
+      "outlier_count": 1233,
+      "outlier_ratio": 0.2055
+    },
+    "packet_size_mean": {
+      "q1": 143.42249999999999,
+      "q3": 546.2375,
+      "iqr": 402.81499999999994,
+      "outlier_count": 0,
+      "outlier_ratio": 0.0
+    },
+    "packet_size_min": {
+      "q1": 54.0,
+      "q3": 356.765,
+      "iqr": 302.765,
+      "outlier_count": 1,
+      "outlier_ratio": 0.0002
+    },
+    "packet_size_max": {
+      "q1": 200.0,
+      "q3": 728.1899999999999,
+      "iqr": 528.1899999999999,
+      "outlier_count": 0,
+      "outlier_ratio": 0.0
+    },
+    "packet_size_std": {
+      "q1": 13.17,
+      "q3": 99.0125,
+      "iqr": 85.8425,
+      "outlier_count": 0,
+      "outlier_ratio": 0.0
+    },
+    "flow_bytes_per_sec": {
+      "q1": 9574.5175,
+      "q3": 80338.1725,
+      "iqr": 70763.655,
+      "outlier_count": 953,
+      "outlier_ratio": 0.1588
+    },
+    "flow_packets_per_sec": {
+      "q1": 27.49,
+      "q3": 231.2025,
+      "iqr": 203.71249999999998,
+      "outlier_count": 972,
+      "outlier_ratio": 0.162
+    }
+  },
+  "correlation_matrix": {
+    "duration_sec": {
+      "duration_sec": 1.0,
+      "fwd_packets": -0.136,
+      "bwd_packets": 0.034,
+      "total_packets": -0.137,
+      "packet_size_mean": -0.039,
+      "packet_size_min": -0.235,
+      "packet_size_max": 0.12,
+      "packet_size_std": -0.088,
+      "flow_bytes_per_sec": -0.091,
+      "flow_packets_per_sec": -0.082
+    },
+    "fwd_packets": {
+      "duration_sec": -0.136,
+      "fwd_packets": 1.0,
+      "bwd_packets": -0.361,
+      "total_packets": 0.999,
+      "packet_size_mean": -0.53,
+      "packet_size_min": -0.38,
+      "packet_size_max": -0.492,
+      "packet_size_std": -0.407,
+      "flow_bytes_per_sec": 0.583,
+      "flow_packets_per_sec": 0.589
+    },
+    "bwd_packets": {
+      "duration_sec": 0.034,
+      "fwd_packets": -0.361,
+      "bwd_packets": 1.0,
+      "total_packets": -0.322,
+      "packet_size_mean": 0.639,
+      "packet_size_min": 0.35,
+      "packet_size_max": 0.704,
+      "packet_size_std": 0.548,
+      "flow_bytes_per_sec": -0.17,
+      "flow_packets_per_sec": -0.182
+    },
+    "total_packets": {
+      "duration_sec": -0.137,
+      "fwd_packets": 0.999,
+      "bwd_packets": -0.322,
+      "total_packets": 1.0,
+      "packet_size_mean": -0.51,
+      "packet_size_min": -0.37,
+      "packet_size_max": -0.468,
+      "packet_size_std": -0.389,
+      "flow_bytes_per_sec": 0.584,
+      "flow_packets_per_sec": 0.59
+    },
+    "packet_size_mean": {
+      "duration_sec": -0.039,
+      "fwd_packets": -0.53,
+      "bwd_packets": 0.639,
+      "total_packets": -0.51,
+      "packet_size_mean": 1.0,
+      "packet_size_min": 0.776,
+      "packet_size_max": 0.909,
+      "packet_size_std": 0.699,
+      "flow_bytes_per_sec": -0.261,
+      "flow_packets_per_sec": -0.277
+    },
+    "packet_size_min": {
+      "duration_sec": -0.235,
+      "fwd_packets": -0.38,
+      "bwd_packets": 0.35,
+      "total_packets": -0.37,
+      "packet_size_mean": 0.776,
+      "packet_size_min": 1.0,
+      "packet_size_max": 0.486,
+      "packet_size_std": 0.368,
+      "flow_bytes_per_sec": -0.173,
+      "flow_packets_per_sec": -0.19
+    },
+    "packet_size_max": {
+      "duration_sec": 0.12,
+      "fwd_packets": -0.492,
+      "bwd_packets": 0.704,
+      "total_packets": -0.468,
+      "packet_size_mean": 0.909,
+      "packet_size_min": 0.486,
+      "packet_size_max": 1.0,
+      "packet_size_std": 0.763,
+      "flow_bytes_per_sec": -0.25,
+      "flow_packets_per_sec": -0.261
+    },
+    "packet_size_std": {
+      "duration_sec": -0.088,
+      "fwd_packets": -0.407,
+      "bwd_packets": 0.548,
+      "total_packets": -0.389,
+      "packet_size_mean": 0.699,
+      "packet_size_min": 0.368,
+      "packet_size_max": 0.763,
+      "packet_size_std": 1.0,
+      "flow_bytes_per_sec": -0.201,
+      "flow_packets_per_sec": -0.212
+    },
+    "flow_bytes_per_sec": {
+      "duration_sec": -0.091,
+      "fwd_packets": 0.583,
+      "bwd_packets": -0.17,
+      "total_packets": 0.584,
+      "packet_size_mean": -0.261,
+      "packet_size_min": -0.173,
+      "packet_size_max": -0.25,
+      "packet_size_std": -0.201,
+      "flow_bytes_per_sec": 1.0,
+      "flow_packets_per_sec": 0.988
+    },
+    "flow_packets_per_sec": {
+      "duration_sec": -0.082,
+      "fwd_packets": 0.589,
+      "bwd_packets": -0.182,
+      "total_packets": 0.59,
+      "packet_size_mean": -0.277,
+      "packet_size_min": -0.19,
+      "packet_size_max": -0.261,
+      "packet_size_std": -0.212,
+      "flow_bytes_per_sec": 0.988,
+      "flow_packets_per_sec": 1.0
+    }
+  }
+}
